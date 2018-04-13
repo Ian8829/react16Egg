@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 function Fruits() {
-  return [
-    <li key="1">Apple</li>,
-    <li key="2">Orange</li>,
-    <li key="3">Apple</li>
-  ]
+  return (
+    <Fragment>
+      <li>Apple</li>
+      <li>Orange</li>
+      <li>Apple</li>
+    </Fragment>
+  )
 }
 
-export default class Fragment extends Component {
+export default class UseFragment extends Component {
   render() {
     return (
       <ul>
