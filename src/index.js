@@ -9,5 +9,6 @@ import Rd from './useDom';
 import Avoid from './avoidTriggerUpdate';
 import Fragment from './fragment';
 import Bar from './bar';
+import GetDriveredStateFromProps from './getDriveredStateFromProps';
 
-ReactDOM.render(<Bar />, document.getElementById('root'));
+ReactDOM.render(<GetDriveredStateFromProps />, document.getElementById('root'));
