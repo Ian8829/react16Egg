@@ -4,5 +4,6 @@ import './index.css';
 import App from './App';
 import MultipleElements from './multipleElements';
 import TextOnly from './textOnly';
+import Portal from './usePortal';
 
-ReactDOM.render(<TextOnly />, document.getElementById('root'));
+ReactDOM.render(<Portal />, document.getElementById('root'));
