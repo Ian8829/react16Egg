@@ -8,5 +8,6 @@ import Portal from './usePortal';
 import Rd from './useDom';
 import Avoid from './avoidTriggerUpdate';
 import Fragment from './fragment';
+import Bar from './bar';
 
-ReactDOM.render(<Fragment />, document.getElementById('root'));
+ReactDOM.render(<Bar />, document.getElementById('root'));
