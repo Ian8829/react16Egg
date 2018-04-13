@@ -10,6 +10,19 @@ function Fruits() {
   )
 }
 
+function Glossary(props) {
+  return (
+    <dl>
+      {props.items.map(item => (
+        <Fragment key={item.id}>
+          <dt>{item.term}</dt>
+          <dd>{item.description}</dd>
+        </Fragment>
+      ))}
+    </dl>
+  );
+}
+
 export default class UseFragment extends Component {
   render() {
     return (
@@ -17,6 +30,20 @@ export default class UseFragment extends Component {
         <li>Peach</li>
         <li>Ananas</li>
         <Fruits />
+        <Glossary
+          items={[
+            {
+              id: 1,
+              term: "HTML",
+              description: "HTML AAA"
+            },
+            {
+              id: 2,
+              term: "CSS",
+              description: "CSS BBB??"
+            }
+          ]}
+        />
       </ul>
     );
   }
