@@ -38,10 +38,12 @@ class Portal extends Component {
     return (
       <div>
         <h1>Dashboard</h1>
-        {this.state.overlayActive &&
-        <Overlay onClose={this.closeOverlay}>
-          <div>Welcome</div>
-        </Overlay>}
+        {
+          this.state.overlayActive &&
+          <Overlay onClose={this.closeOverlay}>
+            <div>Welcome</div>
+          </Overlay>
+        }
       </div>
     );
   }
