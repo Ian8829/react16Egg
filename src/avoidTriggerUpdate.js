@@ -13,9 +13,7 @@ export default class Avoid extends Component {
       if (state.city === newValue) {
         return null;
       }
-      return {
-        city: newValue
-      };
+      return { city: newValue };
     })
   };
 

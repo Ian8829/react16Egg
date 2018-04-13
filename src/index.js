@@ -7,5 +7,6 @@ import TextOnly from './textOnly';
 import Portal from './usePortal';
 import Rd from './useDom';
 import Avoid from './avoidTriggerUpdate';
+import Fragment from './fragment';
 
-ReactDOM.render(<Avoid />, document.getElementById('root'));
+ReactDOM.render(<Fragment />, document.getElementById('root'));
