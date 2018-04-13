@@ -4,6 +4,10 @@ import FetchJson from './fetchJson';
 export default class GetDriveredStateFromProps extends Component {
   state = { person: 1 };
 
+  changePerson = () => {
+    this.setState({ person: 2 });
+  };
+
   render() {
     return (
       <Fragment>
@@ -13,6 +17,7 @@ export default class GetDriveredStateFromProps extends Component {
             return <div>{isLoading ? "Loading..." : `Name: ${data.name}`}</div>;
           }}
         />
+        <button onClick={this.changePerson}>Change Person</button>
       </Fragment>
     );
   }
