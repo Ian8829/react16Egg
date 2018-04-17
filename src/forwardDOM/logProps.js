@@ -13,9 +13,14 @@ function logProps(WrappedComponent) {
     }
   }
 
-  return forwardRef((props, ref) => (
-    <LogProps {...props} forwardedRef={ref} />
-  ));
+  function forwardRef(props, ref) {
+    return <LogProps {...props} forwardedRef={ref} />;
+  }
+
+  const name = WrappedComponent.displayName || WrappedComponent.name;
+  forwardRef.displayName = `logProps(${name})`;
+
+  return React.forwardRef(forwardRef);
 }
 
 export default logProps;
