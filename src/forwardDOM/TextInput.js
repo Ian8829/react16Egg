@@ -1,7 +1,15 @@
-import React from "react";
+import React, { Component, createRef } from "react";
 
-function TextInput(props) {
-  return <input ref={props.inputRef} />
+class TextInput extends Component {
+  inputRef = createRef();
+
+  focus = () => {
+    this.inputRef.current.focus();
+  };
+
+  render() {
+    return <input ref={this.inputRef} />
+  }
 }
 
 export default TextInput;

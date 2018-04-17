@@ -1,15 +1,20 @@
-import React, { Component, createRef } from "react";
+import React, { Component, createRef, Fragment } from "react";
 import TextInput from "./TextInput";
 
 class App extends Component {
   inputRef = createRef();
 
-  componentDidMount() {
-    console.log(this.inputRef.current);
-  }
+  focusInput = () => {
+    this.inputRef.current.focus();
+  };
 
   render() {
-    return <TextInput inputRef={this.inputRef} />
+    return (
+      <Fragment>
+        <TextInput ref={this.inputRef} />
+        <button onClick={this.focusInput}>Focus</button>
+      </Fragment>
+    )
   }
 }
 
