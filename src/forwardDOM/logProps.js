@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, forwardRef } from "react";
 
 function logProps(WrappedComponent) {
   class LogProps extends Component {
@@ -8,11 +8,14 @@ function logProps(WrappedComponent) {
     }
 
     render() {
-      return <WrappedComponent {...this.props} />
+      const { forwardedRef, ...rest } = this.props;
+      return <WrappedComponent ref={forwardedRef} {...rest} />
     }
   }
 
-  return LogProps;
+  return forwardRef((props, ref) => (
+    <LogProps {...props} forwardedRef={ref} />
+  ));
 }
 
 export default logProps;
