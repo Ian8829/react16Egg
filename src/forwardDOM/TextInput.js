@@ -1,4 +1,5 @@
 import React, { Component, createRef } from "react";
+import logProps from "./logProps";
 
 class TextInput extends Component {
   inputRef = createRef();
@@ -12,4 +13,4 @@ class TextInput extends Component {
   }
 }
 
-export default TextInput;
+export default logProps(TextInput);
