@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './App.css';
+import '../App.css';
 
 class Overlay extends Component {
   constructor(props) {

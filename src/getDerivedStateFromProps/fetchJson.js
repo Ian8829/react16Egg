@@ -45,3 +45,5 @@ export default class FetchJson extends Component {
     return <Fragment>{this.props.render(this.state)}</Fragment>;
   }
 }
+
+
